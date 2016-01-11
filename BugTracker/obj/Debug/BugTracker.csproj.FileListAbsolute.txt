@@ -2,7 +2,6 @@ C:\University\Adv Software Engineering\Bug Tracker\BugTracker\BugTracker\bin\Deb
 C:\University\Adv Software Engineering\Bug Tracker\BugTracker\BugTracker\bin\Debug\BugTracker.exe
 C:\University\Adv Software Engineering\Bug Tracker\BugTracker\BugTracker\bin\Debug\BugTracker.pdb
 C:\University\Adv Software Engineering\Bug Tracker\BugTracker\BugTracker\obj\Debug\BugTracker.csprojResolveAssemblyReference.cache
-C:\University\Adv Software Engineering\Bug Tracker\BugTracker\BugTracker\obj\Debug\BugTracker.Form1.resources
 C:\University\Adv Software Engineering\Bug Tracker\BugTracker\BugTracker\obj\Debug\BugTracker.Properties.Resources.resources
 C:\University\Adv Software Engineering\Bug Tracker\BugTracker\BugTracker\obj\Debug\BugTracker.csproj.GenerateResource.Cache
 C:\University\Adv Software Engineering\Bug Tracker\BugTracker\BugTracker\obj\Debug\BugTracker.exe
@@ -12,3 +11,4 @@ C:\University\Adv Software Engineering\Bug Tracker\BugTracker\BugTracker\obj\Deb
 C:\University\Adv Software Engineering\Bug Tracker\BugTracker\BugTracker\bin\Debug\BugDatabase.mdf
 C:\University\Adv Software Engineering\Bug Tracker\BugTracker\BugTracker\bin\Debug\BugDatabase_log.ldf
 C:\University\Adv Software Engineering\Bug Tracker\BugTracker\BugTracker\bin\Debug\System.Data.SqlServerCe.dll
+C:\University\Adv Software Engineering\Bug Tracker\BugTracker\BugTracker\obj\Debug\BugTracker.Form1.resources

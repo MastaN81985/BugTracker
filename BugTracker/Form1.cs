@@ -22,8 +22,9 @@ namespace BugTracker
 
         public void populateListBox()
         {
-            mySqlConnection = new SqlCeConnection(@"Data Source=C:\UNIVERSITY\ADV SOFTWARE ENGINEERING\BUG TRACKER\BUGTRACKER\BUGTRACKER\BUGDATABASE.MDF");
-            String selcmd = "SELECT BugID, LineStart, LineEnd, ProgrammerName, ClassName, MethodName, TimeSubmitted, ProjectName, Description FROM dbo ORDER BY BugID";
+            //this is all code from the tutorial guide to connect to a database.
+            mySqlConnection = new SqlCeConnection(@"Data Source=C:\University\Adv Software Engineering\Bug Tracker\BugTracker\BugTracker\BugDatabase.mdf");
+            String selcmd = "SELECT BugID, LineStart, LineEnd, ProgrammerName, ClassName, MethodName, TimeSubmitted, ProjectName, Description FROM dbo ORDER BY MethodName";
             SqlCeCommand mySqlCommand = new SqlCeCommand(selcmd, mySqlConnection);
             try
             {
@@ -32,7 +33,7 @@ namespace BugTracker
                 bugsLB.Items.Clear();
                 while (mySqlDataReader.Read())
                 {
-                    bugsLB.Items.Add(mySqlDataReader["BugID"] + " " + mySqlDataReader["LineStart"]);
+                    bugsLB.Items.Add(mySqlDataReader["BugID"] + " " + mySqlDataReader["LineStart"] + "  " + mySqlDataReader["LineEnd"] + mySqlDataReader["ProgrammerName"]);
                 }
             }
             catch(SqlCeException ex)
@@ -71,7 +72,7 @@ namespace BugTracker
                 cmdInsert.Parameters.AddWithValue("@ClassName", theClass);
                 cmdInsert.Parameters.AddWithValue("@MethodName", theMethod);
                 cmdInsert.Parameters.AddWithValue("@ProjectName", progName);
-               cmdInsert.ExecuteNonQuery();
+                cmdInsert.ExecuteNonQuery();
             }
 
             catch (SqlCeException ex)

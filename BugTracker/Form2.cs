@@ -16,5 +16,11 @@ namespace BugTracker
         {
             InitializeComponent();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Form1 newBugForm = new Form1();
+            newBugForm.Show();
+        }
     }
 }
