@@ -1,0 +1,4 @@
+﻿1>------ Build started: Project: BugTracker, Configuration: Debug Any CPU ------
+1>C:\University\Adv Software Engineering\Bug Tracker\BugTracker\BugTracker\Form1.cs(38,34,38,36): warning CS0168: The variable 'ex' is declared but never used
+1>  BugTracker -> C:\University\Adv Software Engineering\Bug Tracker\BugTracker\BugTracker\bin\Debug\BugTracker.exe
+========== Build: 1 succeeded, 0 failed, 0 up-to-date, 0 skipped ==========
