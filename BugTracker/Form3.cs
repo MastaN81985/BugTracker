@@ -16,5 +16,20 @@ namespace BugTracker
         {
             InitializeComponent();
         }
+
+        private void bugsBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.bugsBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.bugDatabaseDataSet);
+
+        }
+
+        private void Form3_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'bugDatabaseDataSet.Bugs' table. You can move, or remove it, as needed.
+            this.bugsTableAdapter.Fill(this.bugDatabaseDataSet.Bugs);
+
+        }
     }
 }

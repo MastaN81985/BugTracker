@@ -12,3 +12,7 @@ C:\University\Adv Software Engineering\Bug Tracker\BugTracker\BugTracker\bin\Deb
 C:\University\Adv Software Engineering\Bug Tracker\BugTracker\BugTracker\bin\Debug\BugDatabase_log.ldf
 C:\University\Adv Software Engineering\Bug Tracker\BugTracker\BugTracker\bin\Debug\System.Data.SqlServerCe.dll
 C:\University\Adv Software Engineering\Bug Tracker\BugTracker\BugTracker\obj\Debug\BugTracker.Form1.resources
+C:\University\Adv Software Engineering\Bug Tracker\BugTracker\BugTracker\bin\Debug\Database1.mdf
+C:\University\Adv Software Engineering\Bug Tracker\BugTracker\BugTracker\bin\Debug\Database1_log.ldf
+C:\University\Adv Software Engineering\Bug Tracker\BugTracker\BugTracker\bin\Debug\Database2.mdf
+C:\University\Adv Software Engineering\Bug Tracker\BugTracker\BugTracker\bin\Debug\Database2_log.ldf

@@ -22,7 +22,7 @@ namespace BugTracker
 
         public void populateListBox()
         {
-            //this is all code from the tutorial guide to connect to a database.
+            //this is all code from the tutorial guide to connect to a database, it has been modified with differant command strings to suit this program.
             mySqlConnection = new SqlCeConnection(@"Data Source=C:\University\Adv Software Engineering\Bug Tracker\BugTracker\BugTracker\BugDatabase.mdf");
             String selcmd = "SELECT BugID, LineStart, LineEnd, ProgrammerName, ClassName, MethodName, TimeSubmitted, ProjectName, Description FROM dbo ORDER BY TimeSubmitted";
             SqlCeCommand mySqlCommand = new SqlCeCommand(selcmd, mySqlConnection);
@@ -74,6 +74,7 @@ namespace BugTracker
                 cmdInsert.Parameters.AddWithValue("@MethodName", theMethod);
                 cmdInsert.Parameters.AddWithValue("@ProjectName", progName);
                 cmdInsert.Parameters.AddWithValue("@TimeSubmitted", DateTime.Now);
+                cmdInsert.Parameters.AddWithValue("@Fixed", false);
                 cmdInsert.ExecuteNonQuery();
             }
 
@@ -95,6 +96,8 @@ namespace BugTracker
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'bugDatabaseDataSet.Bugs' table. You can move, or remove it, as needed.
+            this.bugsTableAdapter.Fill(this.bugDatabaseDataSet.Bugs);
 
         }
 
@@ -107,6 +110,14 @@ namespace BugTracker
                 populateListBox();
                 clearTxtBoxes();
             }
+        }
+
+        private void bugsBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.bugsBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.bugDatabaseDataSet);
+
         }
     }
 }
