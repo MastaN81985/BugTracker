@@ -8,25 +8,35 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlServerCe;
+using System.Data.SqlClient;
 
 namespace BugTracker
 {
+    
     public partial class Form1 : Form
     {
         SqlCeConnection mySqlConnection;
+        
         public Form1()
         {
             InitializeComponent();
-            populateListBox();
+            connectToDatabase();
         }
 
+        public void connectToDatabase()
+        {
+            mySqlConnection = new SqlCeConnection(@"Data Source=C:\University\Adv Software Engineering\Bug Tracker\BugTracker\BugTracker\BugDatabase.mdf");
+            String selcmd = "SELECT BugID, LineStart, LineEnd, ProgrammerName, ClassName, MethodName, TimeSubmitted, ProjectName, Description FROM dbo ORDER BY TimeSubmitted";
+            SqlCeCommand mySqlCommand = new SqlCeCommand(selcmd, mySqlConnection);
+
+        }
         public void populateListBox()
         {
             //this is all code from the tutorial guide to connect to a database, it has been modified with differant command strings to suit this program.
             mySqlConnection = new SqlCeConnection(@"Data Source=C:\University\Adv Software Engineering\Bug Tracker\BugTracker\BugTracker\BugDatabase.mdf");
             String selcmd = "SELECT BugID, LineStart, LineEnd, ProgrammerName, ClassName, MethodName, TimeSubmitted, ProjectName, Description FROM dbo ORDER BY TimeSubmitted";
             SqlCeCommand mySqlCommand = new SqlCeCommand(selcmd, mySqlConnection);
-            try
+           /*ry
             {
                 mySqlConnection.Open();
                 SqlCeDataReader mySqlDataReader = mySqlCommand.ExecuteReader();
@@ -40,7 +50,8 @@ namespace BugTracker
             catch(SqlCeException ex)
             {
                 //MessageBox.Show(ID + ".." + ex.Message, Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            }*/
+            
         }
 
         public void clearTxtBoxes()
@@ -69,7 +80,7 @@ namespace BugTracker
                
                 cmdInsert.Parameters.AddWithValue("@LineStart", lineStart);
                 cmdInsert.Parameters.AddWithValue("@LineEnd", lineEnd);
-                cmdInsert.Parameters.AddWithValue("@ProgrammerName", progName);
+                cmdInsert.Parameters.AddWithValue("@ProgrammerName", Name);
                 cmdInsert.Parameters.AddWithValue("@ClassName", theClass);
                 cmdInsert.Parameters.AddWithValue("@MethodName", theMethod);
                 cmdInsert.Parameters.AddWithValue("@ProjectName", progName);
@@ -105,10 +116,9 @@ namespace BugTracker
         {
             if (checkForInput())
             {
-                String commandString = "INSERT INTO dbo(BugID, LineStart, LineEnd, ProgrammerName, ClassName,MethodName,ProjectName,Description) VALUES (@BugID, @LineStart, @LineEnd, @ProgrammerName, @ClassName, @MethodName, @ProjectName)";
-                insertRecord(nameTB.Text, bugLineTb.Text, bugLineEndTB.Text, classTB.Text, methodTB.Text, projNameTb.Text,bugDescTB.Text, commandString);
-                populateListBox();
-                clearTxtBoxes();
+               //String cmdString = 
+               insertRecord(nameTB.Text, bugLineTb.Text, bugLineEndTB.Text, classTB.Text, bugDescTB.Text, projNameTb.Text,cmdString);
+               clearTxtBoxes();
             }
         }
 

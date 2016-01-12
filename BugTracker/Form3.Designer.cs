@@ -212,6 +212,9 @@
             // 
             // bugsDataGridView
             // 
+            this.bugsDataGridView.AllowUserToAddRows = false;
+            this.bugsDataGridView.AllowUserToDeleteRows = false;
+            this.bugsDataGridView.AllowUserToResizeRows = false;
             this.bugsDataGridView.AutoGenerateColumns = false;
             this.bugsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.bugsDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -229,6 +232,7 @@
             this.bugsDataGridView.DataSource = this.bugsBindingSource;
             this.bugsDataGridView.Location = new System.Drawing.Point(12, 28);
             this.bugsDataGridView.Name = "bugsDataGridView";
+            this.bugsDataGridView.ReadOnly = true;
             this.bugsDataGridView.Size = new System.Drawing.Size(1145, 489);
             this.bugsDataGridView.TabIndex = 1;
             // 
@@ -237,66 +241,78 @@
             this.dataGridViewTextBoxColumn1.DataPropertyName = "BugId";
             this.dataGridViewTextBoxColumn1.HeaderText = "BugId";
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Width = 50;
             // 
             // dataGridViewTextBoxColumn2
             // 
             this.dataGridViewTextBoxColumn2.DataPropertyName = "Line Start";
             this.dataGridViewTextBoxColumn2.HeaderText = "Line Start";
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn3
             // 
             this.dataGridViewTextBoxColumn3.DataPropertyName = "Line End";
             this.dataGridViewTextBoxColumn3.HeaderText = "Line End";
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn4
             // 
             this.dataGridViewTextBoxColumn4.DataPropertyName = "ProgrammerName";
             this.dataGridViewTextBoxColumn4.HeaderText = "ProgrammerName";
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn5
             // 
             this.dataGridViewTextBoxColumn5.DataPropertyName = "ClassName";
             this.dataGridViewTextBoxColumn5.HeaderText = "ClassName";
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn6
             // 
             this.dataGridViewTextBoxColumn6.DataPropertyName = "MethodName";
             this.dataGridViewTextBoxColumn6.HeaderText = "MethodName";
             this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn7
             // 
             this.dataGridViewTextBoxColumn7.DataPropertyName = "TimeSubmitted";
             this.dataGridViewTextBoxColumn7.HeaderText = "TimeSubmitted";
             this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn8
             // 
             this.dataGridViewTextBoxColumn8.DataPropertyName = "ProjectName";
             this.dataGridViewTextBoxColumn8.HeaderText = "ProjectName";
             this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            this.dataGridViewTextBoxColumn8.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn9
             // 
             this.dataGridViewTextBoxColumn9.DataPropertyName = "Description";
             this.dataGridViewTextBoxColumn9.HeaderText = "Description";
             this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            this.dataGridViewTextBoxColumn9.ReadOnly = true;
             // 
             // dataGridViewCheckBoxColumn1
             // 
             this.dataGridViewCheckBoxColumn1.DataPropertyName = "Fixed";
             this.dataGridViewCheckBoxColumn1.HeaderText = "Fixed";
             this.dataGridViewCheckBoxColumn1.Name = "dataGridViewCheckBoxColumn1";
+            this.dataGridViewCheckBoxColumn1.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn10
             // 
             this.dataGridViewTextBoxColumn10.DataPropertyName = "FixedBy";
             this.dataGridViewTextBoxColumn10.HeaderText = "FixedBy";
             this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
+            this.dataGridViewTextBoxColumn10.ReadOnly = true;
             // 
             // Form3
             // 
@@ -306,7 +322,7 @@
             this.Controls.Add(this.bugsDataGridView);
             this.Controls.Add(this.bugsBindingNavigator);
             this.Name = "Form3";
-            this.Text = "Form3";
+            this.Text = "Bug Data";
             this.Load += new System.EventHandler(this.Form3_Load);
             ((System.ComponentModel.ISupportInitialize)(this.bugDatabaseDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bugsBindingSource)).EndInit();

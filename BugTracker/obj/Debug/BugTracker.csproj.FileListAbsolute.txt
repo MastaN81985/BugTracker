@@ -16,3 +16,4 @@ C:\University\Adv Software Engineering\Bug Tracker\BugTracker\BugTracker\bin\Deb
 C:\University\Adv Software Engineering\Bug Tracker\BugTracker\BugTracker\bin\Debug\Database1_log.ldf
 C:\University\Adv Software Engineering\Bug Tracker\BugTracker\BugTracker\bin\Debug\Database2.mdf
 C:\University\Adv Software Engineering\Bug Tracker\BugTracker\BugTracker\bin\Debug\Database2_log.ldf
+C:\University\Adv Software Engineering\Bug Tracker\BugTracker\BugTracker\obj\Debug\BugTracker.ReportFixForm.resources

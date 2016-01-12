@@ -22,5 +22,18 @@ namespace BugTracker
             Form1 newBugForm = new Form1();
             newBugForm.Show();
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Form3 viewBugForm = new Form3();
+            viewBugForm.Show();
+                
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            ReportFixForm newBugFixForm = new ReportFixForm();
+            newBugFixForm.Show();
+        }
     }
 }
